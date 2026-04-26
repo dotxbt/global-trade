@@ -1,0 +1,86 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  border-bottom: 1px solid var(--color-border);
+  transition: var(--transition);
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.logoIcon {
+  color: var(--color-secondary);
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navLink {
+  font-weight: 500;
+  color: var(--color-text);
+  position: relative;
+}
+
+.navLink:hover {
+  color: var(--color-primary);
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-secondary);
+  transition: var(--transition);
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mobileMenuBtn {
+  display: none;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+    display: none; /* simple hidden for mobile, in a real app would be a drawer */
+  }
+  .actions .btn {
+    display: none;
+  }
+  .mobileMenuBtn {
+    display: block;
+  }
+}

@@ -1,0 +1,71 @@
+.section {
+  padding: 6rem 0;
+  background-color: var(--color-surface);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.card {
+  background-color: var(--color-white);
+  padding: 2.5rem;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  position: relative;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+}
+
+.quote {
+  color: var(--color-text-light);
+  font-style: italic;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+  position: relative;
+  z-index: 1;
+}
+
+.quoteIcon {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  color: rgba(245, 158, 11, 0.1);
+  z-index: 0;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.5rem;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+.authorInfo h4 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.authorInfo p {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+}

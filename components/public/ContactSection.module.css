@@ -1,0 +1,61 @@
+.section {
+  padding: 6rem 0;
+  background-color: var(--color-background);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.infoItem {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.iconWrapper {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(15, 23, 42, 0.05);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.infoContent h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+}
+
+.infoContent p {
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+.formCard {
+  background-color: var(--color-white);
+  padding: 3rem;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-border);
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .formCard {
+    padding: 2rem;
+  }
+}
