@@ -73,14 +73,45 @@
   color: var(--color-primary);
 }
 
+.mobileOnlyBtn {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .navLinks {
-    display: none; /* simple hidden for mobile, in a real app would be a drawer */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-white);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    box-shadow: var(--shadow-md);
+    gap: 0;
   }
-  .actions .btn {
+  
+  .navLinks.mobileOpen {
+    max-height: 500px;
+    padding: 1rem 1.5rem 1.5rem;
+    gap: 1.5rem;
+  }
+  
+  .desktopBtn {
     display: none;
   }
+  
+  .mobileOnlyBtn {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
   .mobileMenuBtn {
     display: block;
   }
 }
+

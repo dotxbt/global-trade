@@ -40,7 +40,7 @@ export default function UserProfile() {
           <h3 style={{ fontSize: '1.25rem', marginBottom: '1.5rem', borderBottom: '1px solid var(--color-border)', paddingBottom: '1rem' }}>Edit Informasi Profil</h3>
           
           <form onSubmit={(e) => e.preventDefault()}>
-            <div className="grid" style={{ gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }}>
+            <div className="grid grid-cols-2" style={{ gap: '1.5rem', marginBottom: '1.5rem' }}>
               <div className="form-group" style={{ marginBottom: 0 }}>
                 <label className="form-label">Nama Lengkap</label>
                 <div style={{ position: 'relative' }}>

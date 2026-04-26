@@ -58,4 +58,10 @@
   .grid {
     grid-template-columns: 1fr;
   }
+  .section {
+    padding: 4rem 0;
+  }
+  .card {
+    padding: 2rem;
+  }
 }

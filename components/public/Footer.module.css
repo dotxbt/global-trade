@@ -91,6 +91,12 @@
   }
 }
 
+@media (max-width: 768px) {
+  .footer {
+    padding: 4rem 0 2rem;
+  }
+}
+
 @media (max-width: 576px) {
   .grid {
     grid-template-columns: 1fr;

@@ -59,3 +59,9 @@
     padding: 2rem;
   }
 }
+
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 0;
+  }
+}

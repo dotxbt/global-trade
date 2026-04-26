@@ -50,7 +50,7 @@ export default function AddService() {
               <input type="text" className="form-input" placeholder="Masukkan nama barang" required />
             </div>
 
-            <div className="grid" style={{ gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+            <div className="grid grid-cols-2" style={{ gap: '1rem' }}>
               <div className="form-group">
                 <label className="form-label">Pelabuhan Muat / Asal</label>
                 <input type="text" className="form-input" placeholder="Contoh: Tanjung Priok" />

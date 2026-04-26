@@ -46,7 +46,7 @@ export default function OrderPerizinan() {
                     <label className="form-label">Nama Perusahaan</label>
                     <input type="text" className="form-input" required placeholder="PT / CV Nama Perusahaan" />
                   </div>
-                  <div className="grid" style={{ gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                  <div className="grid grid-cols-2" style={{ gap: '1rem' }}>
                     <div className="form-group">
                       <label className="form-label">Nama PIC</label>
                       <input type="text" className="form-input" required placeholder="Nama lengkap penanggung jawab" />
@@ -78,7 +78,7 @@ export default function OrderPerizinan() {
                     <label className="form-label">Komoditas / Jenis Barang</label>
                     <input type="text" className="form-input" required placeholder="Contoh: Alat kesehatan, rempah-rempah, sparepart mesin" />
                   </div>
-                  <div className="grid" style={{ gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                  <div className="grid grid-cols-2" style={{ gap: '1rem' }}>
                     <div className="form-group">
                       <label className="form-label">Negara Asal</label>
                       <input type="text" className="form-input" placeholder="Contoh: China (untuk Impor)" />

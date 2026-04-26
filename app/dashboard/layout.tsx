@@ -12,9 +12,27 @@ export default function DashboardLayout({
   const [isSidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', backgroundColor: 'var(--color-surface)' }}>
-      <Sidebar isOpen={isSidebarOpen} />
+    <div style={{ display: 'flex', minHeight: '100vh', backgroundColor: 'var(--color-surface)', position: 'relative' }}>
+      <Sidebar isOpen={isSidebarOpen} onClose={() => setSidebarOpen(false)} />
       
+      {/* Mobile Overlay */}
+      {isSidebarOpen && (
+        <div 
+          className="sidebar-overlay"
+          onClick={() => setSidebarOpen(false)}
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100vw',
+            height: '100vh',
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            zIndex: 90,
+            display: 'none'
+          }}
+        />
+      )}
+
       <div style={{ flex: 1, marginLeft: '260px', display: 'flex', flexDirection: 'column', transition: 'margin-left 0.3s ease' }} className="dashboard-content">
         {/* Mobile Header */}
         <div style={{ 
@@ -32,18 +50,24 @@ export default function DashboardLayout({
         </div>
 
         {/* Main Content */}
-        <main style={{ flex: 1, padding: '2rem' }}>
+        <main style={{ flex: 1, padding: '1rem' }} className="main-padding">
           {children}
         </main>
       </div>
 
       <style dangerouslySetInnerHTML={{__html: `
+        @media (min-width: 993px) {
+          .main-padding { padding: 2rem !important; }
+        }
         @media (max-width: 992px) {
           .dashboard-content {
             margin-left: 0 !important;
           }
           .mobile-header {
             display: flex !important;
+          }
+          .sidebar-overlay {
+            display: block !important;
           }
         }
       `}} />

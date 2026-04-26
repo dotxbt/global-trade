@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { Ship, LayoutDashboard, User, PlusCircle, History, LogOut } from "lucide-react";
 import styles from "./Sidebar.module.css";
 
-export default function Sidebar({ isOpen }: { isOpen?: boolean }) {
+export default function Sidebar({ isOpen, onClose }: { isOpen?: boolean, onClose?: () => void }) {
   const pathname = usePathname();
 
   const navItems = [
@@ -30,6 +30,7 @@ export default function Sidebar({ isOpen }: { isOpen?: boolean }) {
               key={item.href} 
               href={item.href} 
               className={`${styles.navLink} ${isActive ? styles.navLinkActive : ''}`}
+              onClick={onClose}
             >
               {item.icon}
               <span>{item.name}</span>

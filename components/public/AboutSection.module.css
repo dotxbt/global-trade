@@ -77,3 +77,22 @@
     gap: 3rem;
   }
 }
+
+@media (max-width: 768px) {
+  .aboutSection {
+    padding: 4rem 0;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .description {
+    font-size: 1rem;
+  }
+  .stats {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .statNumber {
+    font-size: 2rem;
+  }
+}
